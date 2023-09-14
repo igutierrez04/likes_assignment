@@ -1,24 +1,20 @@
-
-var count = [12, 9, 5];
-var likes = document.querySelector(".likes");
+console.log("loading page...")
 
 
-function like(){
+// index     0   1  2
+var likes = [12, 9, 5];
+var posts = [
+    document.querySelector("#post-1"),
+    document.querySelector("#post-2"),
+    document.querySelector("#post-3")
+];
 
-    for(let i = 0; i < count.length; i++){
-        if(count[i] == count[0]){
-            console.log(count[i])
-            count[i] +=1;
-            likes.innerText = count[i] + " Like(s)";
-            return count[i];
-        }
-        else if(count[i] == count[1]){
-            count[i] +=1;
-            likes.innerText = count[i] + " Like(s)";
-            return count[i];
-        }
-    }
+function like(id){
+    likes[id]++;
+    posts[id].innerHTML = likes[id] + " like(s)"
+    console.log(likes)
 }
 
-// console.log(count)
+
+
 
